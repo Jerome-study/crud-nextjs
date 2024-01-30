@@ -8,10 +8,12 @@ interface Topic {
 }
 
 export default async function  TopicsList() {
-    
-    const response = await fetch(`${NEXT_URL}/api/topics`, { cache: "no-store"})
+    const response = await fetch(`${NEXT_URL}/api/topics`)
     const data: Topic = await response.json()
     const { topics } = data
+
+    if(!topics) return <h1>Topic is Empty</h1>
+
     return(
         <>
            { topics?.map(topic => {

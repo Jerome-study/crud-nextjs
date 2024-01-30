@@ -1,3 +1,5 @@
+
+
 import connectMongoDB from "@/libs/mongodb";
 import Topic from "@/models/topic";
 import { NextRequest, NextResponse } from "next/server";

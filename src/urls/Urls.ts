@@ -1,3 +1,3 @@
-export const NEXT_URL = process.env.URL_PATH ||  "http://localhost:3000"
+export const NEXT_URL = process.env.NEXT_PUBLIC_URL_PATH
 
 
