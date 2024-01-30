@@ -7,6 +7,7 @@ import { NEXT_URL } from "@/urls/Urls";
 
 
 export default function EditTopicForm({ topic }: { topic: TopicProps}) {
+    console.log(NEXT_URL)
     const { _id, topicTitle, topicDescription } = topic;
     const [isLoading, setIsLoading] = useState(false);
     const router = useRouter();
