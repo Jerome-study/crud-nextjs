@@ -5,6 +5,7 @@ import { LoginProps } from "@/models/definitions";
 import User from "@/models/register";
 import bcrypt from 'bcryptjs'
 
+
 export const authOptions: NextAuthOptions = {
     providers: [
         CredentialsProvider({
