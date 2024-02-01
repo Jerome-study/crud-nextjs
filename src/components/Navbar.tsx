@@ -5,7 +5,6 @@ import { signOut } from "next-auth/react"
 import { useSession } from "next-auth/react"
 
 export default function Navbar() {
-    
     const { data: session } = useSession();
     console.log(session?.user)
     return(
@@ -17,7 +16,7 @@ export default function Navbar() {
             
             <nav className="flex justify-between items-center bg-slate-800 px-8 py-3">
                 <Link className="text-white font-bold" href="/topic">CRUD PRACTICE</Link>
-                <Link className="bg-white p-2" href="/topic/addTopic">Add Topic</Link>
+                <Link className="bg-white p-2" href="/topic/addTopic">Add Topic</Link> 
             </nav>
         </div>
     )
