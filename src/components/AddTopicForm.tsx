@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { DataProps } from "@/models/definitions";
 import { useState } from "react";
 import { NEXT_URL } from "@/urls/Urls";
+import { useSession } from "next-auth/react";
 
 export default function AddTopicForm() {
     const { register, handleSubmit, watch, formState: { errors } } = useForm<DataProps>();
@@ -20,7 +21,7 @@ export default function AddTopicForm() {
         });
         if (res.ok) {
             setIsLoading(false)
-            router.push("/");
+            router.push("/topic");
             router.refresh();
         } else {
             throw new Error("Failed to create a topic")

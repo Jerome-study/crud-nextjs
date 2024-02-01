@@ -1,16 +1,12 @@
-import TopicsList from "@/components/TopicsList";
-import { Suspense } from "react";
-import Loading from "./loading";
-
-export const revalidate = 0;
-
+import LoginForm from "@/components/LoginForm";
+import { authOptions } from "@/utils/authOption"
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
 export default async function Home() {
+  const session = await getServerSession(authOptions);
+
+  if (session) return redirect("/topic")
   return (
-    <>
-      <h1>Topic</h1>
-      <Suspense fallback={<Loading />}>
-        <TopicsList />
-      </Suspense>
-    </>
+    <LoginForm />
   );
 }

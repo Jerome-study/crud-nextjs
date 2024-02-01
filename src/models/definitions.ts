@@ -16,3 +16,15 @@ export interface IdProps {
 export interface Topic {
     topics: TopicProps[]
 }
+
+export interface RegisterProps {
+    first_name: string,
+    last_name: string
+    username: string,
+    password: string
+}
+
+export interface LoginProps {
+    username: string,
+    password: string
+}

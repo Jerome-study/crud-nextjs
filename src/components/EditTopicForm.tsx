@@ -30,7 +30,7 @@ export default function EditTopicForm({ topic }: { topic: TopicProps}) {
         });
         if(res.ok) {
             setIsLoading(false)
-            router.push("/")
+            router.push("/topic")
             router.refresh();
         }
     };
